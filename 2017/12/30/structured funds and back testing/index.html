@@ -7,7 +7,7 @@
 
 <html class="theme-next gemini use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -83,10 +83,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Structured Funds and Related Back Testing">
 <meta property="og:url" content="http://yoursite.com/2017/12/30/structured funds and back testing/index.html">
-<meta property="og:site_name" content="Xu Jingjing">
+<meta property="og:site_name" content="XuJingjing&#39;s Blog">
 <meta property="og:description" content="This artical will introduce the Structured Fund and show related back testing. Definition of Structured Funds A fund that combines both equity and fixed-income products to provide investors with a deg">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-30T16:49:28.711Z">
+<meta property="og:updated_time" content="2017-12-31T16:26:09.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Structured Funds and Related Back Testing">
 <meta name="twitter:description" content="This artical will introduce the Structured Fund and show related back testing. Definition of Structured Funds A fund that combines both equity and fixed-income products to provide investors with a deg">
@@ -125,7 +125,7 @@
 
 
 
-  <title>Structured Funds and Related Back Testing | Xu Jingjing</title>
+  <title>Structured Funds and Related Back Testing | XuJingjing's Blog</title>
   
 
 
@@ -140,7 +140,7 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -154,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -165,7 +165,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Xu Jingjing</span>
+        <span class="site-title">XuJingjing's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -261,7 +261,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xu Jingjing">
+      <meta itemprop="name" content="XuJingjing's Blog">
     </span>
 
     
@@ -345,11 +345,17 @@
 <h1 id="Definition-of-Structured-Funds"><a href="#Definition-of-Structured-Funds" class="headerlink" title="Definition of Structured Funds"></a>Definition of Structured Funds</h1><blockquote>
 <p>A fund that combines both equity and fixed-income products to provide investors with a degree of both capital protection and capital appreciation. These funds use fixed-income securities to give the fund capital protection through principal repayment along with the added gain of interest payments. The fund uses options, futures and other derivatives, which are often based on market indexes, to provide exposure to capital appreciation. </p>
 <h2 id="Breaking-Down-Structured-Funds"><a href="#Breaking-Down-Structured-Funds" class="headerlink" title="Breaking Down Structured Funds"></a>Breaking Down Structured Funds</h2><blockquote>
-<p>These products are attractive to investors looking for downside protection who would also like to see gains from upside movements in the markets. Depending on the fund, the exact products and guarantees will vary. <a href="Structured Funds https://www.investopedia.com/terms/s/structured_fund.asp#ixzz52jiAN6YH">reference</a></p>
+<p>These products are attractive to investors looking for downside protection who would also like to see gains from upside movements in the markets. Depending on the fund, the exact products and guarantees will vary. <a href="Structured Funds https://www.investopedia.com/terms/s/structured_fund.asp#ixzz52jiAN6YH">[Read More]</a></p>
 </blockquote>
 </blockquote>
-<h1 id="initial-model-of-Structured-Fund-A"><a href="#initial-model-of-Structured-Fund-A" class="headerlink" title="initial model of Structured Fund A"></a>initial model of Structured Fund A</h1><p>  Structured Fund A is fixed-income part of Structured Funds, which can be traded in secondary market. This part is mainly about trading strategies of tradable Structured Fund A.</p>
-<h2 id="Factors"><a href="#Factors" class="headerlink" title="Factors"></a>Factors</h2><h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><h2 id="Related-Formulas"><a href="#Related-Formulas" class="headerlink" title="Related Formulas"></a>Related Formulas</h2><h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2>
+<p>  The Structured Fund separates the fund returns or net assets to form two kinds of fund with different risk-return performance in a portfolio. It include the Structured Fund A (FundA), the Structured Fund B (FundB), and the Structured Fund itself (FundS).</p>
+<p>  The Structured Fund A: A share of Structured Fund. A party provides money to the Structured Fund B in stipulated yield rate.<br>  The Structured Fund B: B share of The Structured Fund. A party borrows money from the Structured Fund A. The Structured Fund B is a leverage fund.</p>
+<h1 id="Initial-Model-of-the-Structured-Fund-A"><a href="#Initial-Model-of-the-Structured-Fund-A" class="headerlink" title="Initial Model of the Structured Fund A"></a>Initial Model of the Structured Fund A</h1><p>  The Structured Fund A is fixed-income part of Structured Funds, which can be traded in secondary market and OTC market. This part is mainly about trading strategies of the tradable Structured Fund A in secondary market.</p>
+<h2 id="Factors"><a href="#Factors" class="headerlink" title="Factors"></a>Factors</h2><p>  Y<sub>ia</sub> : Implied Yield of FundA<br>  Y<sub>sa</sub> : stipulated yield of FundA<br>  Rd<sub>w</sub> : Rate of Discount and Premium of Whole Fund<br>  Rd<sub>a</sub> : Rate of Discount of FundA<br>  L<sub>a</sub> : Liquidity of FundA<br>  T<sub>i</sub> : Trading Interval<br>  P<sub>a</sub> : the Price of FundA<br>  P<sub>w</sub> : the Price of FundS<br>  NV<sub>a</sub> : the Net Value of FundA<br>  NV<sub>w</sub> : the Net Value of FundS<br>  R<sub>a</sub> : the Ratio of FundA in FundS<br>  R<sub>b</sub> : the Ratio of FundB in FundS<br>  Y<sub>r</sub> ：remaining years of regular discount<br>  IR<sub>n</sub> : interest rate of next period<br>  IR<sub>c</sub> : interest rate of current period</p>
+<h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>  Source ：CSMAR of GTA </p>
+<h2 id="Related-Formulas"><a href="#Related-Formulas" class="headerlink" title="Related Formulas"></a>Related Formulas</h2><h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><hr>
+<p>NOTES<br><em>Copyright and all rights therein are retained by Xujingjing. All persons copying this information are expected to note the source. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</em></p>
+
       
     </div>
     
@@ -383,8 +389,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/31/pair trade strategy/" rel="prev" title="Pair-trade Strategy and Related Back Testing">
-                Pair-trade Strategy and Related Back Testing <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/31/pair trade strategy/" rel="prev" title="Pair-trade Strategy and Related Back Testing (updating)">
+                Pair-trade Strategy and Related Back Testing (updating) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -456,7 +462,7 @@
                 alt="Xu Jingjing" />
             
               <p class="site-author-name" itemprop="name">Xu Jingjing</p>
-              <p class="site-description motion-element" itemprop="description">Three passions, simple but overwhelmingly strong, have governed my life - the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind. ——Romain Rolland</p>
+              <p class="site-description motion-element" itemprop="description">Three passions, simple but overwhelmingly strong, have governed my life - the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind.</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -512,7 +518,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition-of-Structured-Funds"><span class="nav-number">1.</span> <span class="nav-text">Definition of Structured Funds</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Breaking-Down-Structured-Funds"><span class="nav-number">1.1.</span> <span class="nav-text">Breaking Down Structured Funds</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#initial-model-of-Structured-Fund-A"><span class="nav-number">2.</span> <span class="nav-text">initial model of Structured Fund A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Factors"><span class="nav-number">2.1.</span> <span class="nav-text">Factors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data"><span class="nav-number">2.2.</span> <span class="nav-text">Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related-Formulas"><span class="nav-number">2.3.</span> <span class="nav-text">Related Formulas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments"><span class="nav-number">2.4.</span> <span class="nav-text">Experiments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-number">2.5.</span> <span class="nav-text">Results</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition-of-Structured-Funds"><span class="nav-number">1.</span> <span class="nav-text">Definition of Structured Funds</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Breaking-Down-Structured-Funds"><span class="nav-number">1.1.</span> <span class="nav-text">Breaking Down Structured Funds</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Initial-Model-of-the-Structured-Fund-A"><span class="nav-number">2.</span> <span class="nav-text">Initial Model of the Structured Fund A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Factors"><span class="nav-number">2.1.</span> <span class="nav-text">Factors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data"><span class="nav-number">2.2.</span> <span class="nav-text">Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related-Formulas"><span class="nav-number">2.3.</span> <span class="nav-text">Related Formulas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments"><span class="nav-number">2.4.</span> <span class="nav-text">Experiments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-number">2.5.</span> <span class="nav-text">Results</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -532,7 +538,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -666,7 +672,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
