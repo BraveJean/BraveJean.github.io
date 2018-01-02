@@ -86,10 +86,12 @@
 <meta property="og:site_name" content="XuJingjing&#39;s Blog">
 <meta property="og:description" content="This artical will introduce the Structured Fund and show related back testing. Definition of Structured Funds A fund that combines both equity and fixed-income products to provide investors with a deg">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-02T13:52:20.148Z">
+<meta property="og:image" content="http://p1qadxd1t.bkt.clouddn.com/FundA_YHProfit_D10_amt1000000_20160713.jpg">
+<meta property="og:updated_time" content="2018-01-02T15:18:21.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Structured Funds and Related Back Testing (updating)">
 <meta name="twitter:description" content="This artical will introduce the Structured Fund and show related back testing. Definition of Structured Funds A fund that combines both equity and fixed-income products to provide investors with a deg">
+<meta name="twitter:image" content="http://p1qadxd1t.bkt.clouddn.com/FundA_YHProfit_D10_amt1000000_20160713.jpg">
 
 
 
@@ -350,7 +352,7 @@
 </blockquote>
 <p>  The Structured Fund separates the fund returns or net assets to form two kinds of fund with different risk-return performance in a portfolio. It include the Structured Fund A (FundA), the Structured Fund B (FundB), and the Structured Fund itself (FundS).</p>
 <p>  The Structured Fund A: A share of The Structured Fund. A party provides money to the Structured Fund B in stipulated yield rate.<br>  The Structured Fund B: B share of The Structured Fund. A party borrows money from the Structured Fund A. The Structured Fund B is a leverage fund.</p>
-<h1 id="Initial-Model-of-the-Structured-Fund-A"><a href="#Initial-Model-of-the-Structured-Fund-A" class="headerlink" title="Initial Model of the Structured Fund A"></a>Initial Model of the Structured Fund A</h1><p>  The Structured Fund A is fixed-income part of Structured Funds, which can be traded in secondary market and OTC market. This part is mainly about trading strategies of the tradable Structured Fund A in secondary market. The ‘Experiments’ part of this articl shows only one section of the whole experiment.</p>
+<h1 id="Initial-Model-of-the-Structured-Fund-A"><a href="#Initial-Model-of-the-Structured-Fund-A" class="headerlink" title="Initial Model of the Structured Fund A"></a>Initial Model of the Structured Fund A</h1><p>  The Structured Fund A is fixed-income part of Structured Funds, which can be traded in secondary market and OTC market. This part is mainly about trading strategies of the tradable Structured Fund A in secondary market.<br>  (Note: The ‘Experiments’ part of this articl shows only one section of the whole experiment.)</p>
 <h2 id="Factors"><a href="#Factors" class="headerlink" title="Factors"></a>Factors</h2><script type="math/tex; mode=display">
   \begin{align} 
   Y_{ia}\; & \mathit{: Implied \;Yield \;of \;FundA}\\
@@ -369,13 +371,13 @@
   Y_{r}\; & \mathit{: \;Remaining \;Years \;of \;Regular \;Discount}\\
   IR_{n}\; & \mathit{: \;Interest \;Rate \;of \;Next \;Period}\\
   IR_{c}\; & \mathit{: \;Interest \;Rate \;of \;Current \;Period}\\
-  \end{align}</script><h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>  Data Source ：CSMAR of GTA<br>  filter condition : </p>
+  \end{align}</script><h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>  Data Source：CSMAR of GTA<br>  Time: 09/01/2015 ~ 26/06/2016<br>  filter condition :  </p>
 <script type="math/tex; mode=display">
   \begin{align}  
   Y_{sa} &= 3.5\% \\
-  T_{i} &= 20 \;(Trading \; Day)\\
-  L_{a} &= 1000,000
-  \end{align}</script><p>  transaction object : the Structured Fund A</p>
+  T_{i} &= 10 \;(Trading \; Day)\\
+  L_{a} &= 1,000,000
+  \end{align}</script><p>  transaction object : the Structured Fund A<br>  the transaction price of FundA : closing price<br>  the net value of FundA : Last trading day value</p>
 <h2 id="Related-Formulas"><a href="#Related-Formulas" class="headerlink" title="Related Formulas"></a>Related Formulas</h2><script type="math/tex; mode=display">
   \begin{align}
   Y_{ia} &= \frac{Y_{ia}} {( P_{a} + ( 1- NV_{a} )} &\qquad (1)\\
@@ -385,7 +387,10 @@
   Rd_{s} &= \frac{ P_{s} - NV_{s} } { NV_{s} } &\qquad (4)\\
   \\
   Rd_{a} &= \frac{ NV_{a} - P_{a} } { NV_{a} } &\qquad (5)\\
-  \end{align}</script><h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><hr>
+  \end{align}</script><h2 id="Experiments-MATLAB"><a href="#Experiments-MATLAB" class="headerlink" title="Experiments ( MATLAB )"></a>Experiments ( MATLAB )</h2><p>  1.Select all eligible FundA<br>  2.Load the daily data of FundA<br>  3.Process discounted and premium data of FundA<br>  4.Back testing ( Select top 10 FundA per transaction )</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>  Screening indexes and some results are shown as follow.<br>  Notes:<br>  Trading Day: 250/yr<br>  Commission charge are not included.( Commission charge:0.03% )</p>
+<h3 id="Implied-Yield-of-FundA"><a href="#Implied-Yield-of-FundA" class="headerlink" title="Implied Yield of FundA"></a>Implied Yield of FundA</h3><p>  <img src="http://p1qadxd1t.bkt.clouddn.com/FundA_YHProfit_D10_amt1000000_20160713.jpg"><br>  Max Drawdown Rate: 2.74%<br>  Annual Return: 9.68%<br>  Volatility: 0.30%</p>
+<h3 id="Rate-of-Discount-of-FundA"><a href="#Rate-of-Discount-of-FundA" class="headerlink" title="Rate of Discount of FundA"></a>Rate of Discount of FundA</h3><h3 id="Implied-Yield-of-FundA-Rate-of-Discount-of-FundA"><a href="#Implied-Yield-of-FundA-Rate-of-Discount-of-FundA" class="headerlink" title="Implied Yield of FundA + Rate of Discount of FundA"></a>Implied Yield of FundA + Rate of Discount of FundA</h3><h3 id="Rate-of-Discount-and-Premium-of-FundS"><a href="#Rate-of-Discount-and-Premium-of-FundS" class="headerlink" title="Rate of Discount and Premium of FundS"></a>Rate of Discount and Premium of FundS</h3><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><hr>
 <p>NOTES<br><em>Copyright and all rights therein are retained by Xujingjing. All persons copying this information are expected to note the source. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</em></p>
 
       
@@ -550,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition-of-Structured-Funds"><span class="nav-number">1.</span> <span class="nav-text">Definition of Structured Funds</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Breaking-Down-Structured-Funds"><span class="nav-number">1.1.</span> <span class="nav-text">Breaking Down Structured Funds</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Initial-Model-of-the-Structured-Fund-A"><span class="nav-number">2.</span> <span class="nav-text">Initial Model of the Structured Fund A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Factors"><span class="nav-number">2.1.</span> <span class="nav-text">Factors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data"><span class="nav-number">2.2.</span> <span class="nav-text">Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related-Formulas"><span class="nav-number">2.3.</span> <span class="nav-text">Related Formulas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments"><span class="nav-number">2.4.</span> <span class="nav-text">Experiments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-number">2.5.</span> <span class="nav-text">Results</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition-of-Structured-Funds"><span class="nav-number">1.</span> <span class="nav-text">Definition of Structured Funds</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Breaking-Down-Structured-Funds"><span class="nav-number">1.1.</span> <span class="nav-text">Breaking Down Structured Funds</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Initial-Model-of-the-Structured-Fund-A"><span class="nav-number">2.</span> <span class="nav-text">Initial Model of the Structured Fund A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Factors"><span class="nav-number">2.1.</span> <span class="nav-text">Factors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data"><span class="nav-number">2.2.</span> <span class="nav-text">Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related-Formulas"><span class="nav-number">2.3.</span> <span class="nav-text">Related Formulas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments-MATLAB"><span class="nav-number">2.4.</span> <span class="nav-text">Experiments ( MATLAB )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-number">2.5.</span> <span class="nav-text">Results</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implied-Yield-of-FundA"><span class="nav-number">2.5.1.</span> <span class="nav-text">Implied Yield of FundA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rate-of-Discount-of-FundA"><span class="nav-number">2.5.2.</span> <span class="nav-text">Rate of Discount of FundA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implied-Yield-of-FundA-Rate-of-Discount-of-FundA"><span class="nav-number">2.5.3.</span> <span class="nav-text">Implied Yield of FundA + Rate of Discount of FundA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rate-of-Discount-and-Premium-of-FundS"><span class="nav-number">2.5.4.</span> <span class="nav-text">Rate of Discount and Premium of FundS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">2.6.</span> <span class="nav-text">Conclusion</span></a></li></ol></li></ol></div>
             
 
           </div>
