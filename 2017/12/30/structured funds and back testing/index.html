@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="XuJingjing&#39;s Blog">
 <meta property="og:description" content="This artical will introduce the Structured Fund and show related back testing. Definition of Structured Funds A fund that combines both equity and fixed-income products to provide investors with a deg">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-31T16:28:26.003Z">
+<meta property="og:updated_time" content="2018-01-02T13:52:20.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Structured Funds and Related Back Testing (updating)">
 <meta name="twitter:description" content="This artical will introduce the Structured Fund and show related back testing. Definition of Structured Funds A fund that combines both equity and fixed-income products to provide investors with a deg">
@@ -349,11 +349,43 @@
 </blockquote>
 </blockquote>
 <p>  The Structured Fund separates the fund returns or net assets to form two kinds of fund with different risk-return performance in a portfolio. It include the Structured Fund A (FundA), the Structured Fund B (FundB), and the Structured Fund itself (FundS).</p>
-<p>  The Structured Fund A: A share of Structured Fund. A party provides money to the Structured Fund B in stipulated yield rate.<br>  The Structured Fund B: B share of The Structured Fund. A party borrows money from the Structured Fund A. The Structured Fund B is a leverage fund.</p>
-<h1 id="Initial-Model-of-the-Structured-Fund-A"><a href="#Initial-Model-of-the-Structured-Fund-A" class="headerlink" title="Initial Model of the Structured Fund A"></a>Initial Model of the Structured Fund A</h1><p>  The Structured Fund A is fixed-income part of Structured Funds, which can be traded in secondary market and OTC market. This part is mainly about trading strategies of the tradable Structured Fund A in secondary market.</p>
-<h2 id="Factors"><a href="#Factors" class="headerlink" title="Factors"></a>Factors</h2><p>  Y<sub>ia</sub> : Implied Yield of FundA<br>  Y<sub>sa</sub> : stipulated yield of FundA<br>  Rd<sub>w</sub> : Rate of Discount and Premium of Whole Fund<br>  Rd<sub>a</sub> : Rate of Discount of FundA<br>  L<sub>a</sub> : Liquidity of FundA<br>  T<sub>i</sub> : Trading Interval<br>  P<sub>a</sub> : the Price of FundA<br>  P<sub>w</sub> : the Price of FundS<br>  NV<sub>a</sub> : the Net Value of FundA<br>  NV<sub>w</sub> : the Net Value of FundS<br>  R<sub>a</sub> : the Ratio of FundA in FundS<br>  R<sub>b</sub> : the Ratio of FundB in FundS<br>  Y<sub>r</sub> ：remaining years of regular discount<br>  IR<sub>n</sub> : interest rate of next period<br>  IR<sub>c</sub> : interest rate of current period</p>
-<h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>  Source ：CSMAR of GTA </p>
-<h2 id="Related-Formulas"><a href="#Related-Formulas" class="headerlink" title="Related Formulas"></a>Related Formulas</h2><h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><hr>
+<p>  The Structured Fund A: A share of The Structured Fund. A party provides money to the Structured Fund B in stipulated yield rate.<br>  The Structured Fund B: B share of The Structured Fund. A party borrows money from the Structured Fund A. The Structured Fund B is a leverage fund.</p>
+<h1 id="Initial-Model-of-the-Structured-Fund-A"><a href="#Initial-Model-of-the-Structured-Fund-A" class="headerlink" title="Initial Model of the Structured Fund A"></a>Initial Model of the Structured Fund A</h1><p>  The Structured Fund A is fixed-income part of Structured Funds, which can be traded in secondary market and OTC market. This part is mainly about trading strategies of the tradable Structured Fund A in secondary market. The ‘Experiments’ part of this articl shows only one section of the whole experiment.</p>
+<h2 id="Factors"><a href="#Factors" class="headerlink" title="Factors"></a>Factors</h2><script type="math/tex; mode=display">
+  \begin{align} 
+  Y_{ia}\; & \mathit{: Implied \;Yield \;of \;FundA}\\
+  Y_{sa}\; & \mathit{: Stipulated \;Yield \;of \;FundA}\\
+  Rd_{s}\; & \mathit{: Rate \;of \;Discount \;and \;Premium \;of \;FundS}\\
+  Rd_{a}\; & \mathit{: Rate \;of \;Discount \;of \;FundA}\\
+  V_{a}\; & \mathit{: Average \;Daily \;Transaction \; Volume \;of \;FundA}\\
+  T_{i}\; & \mathit{: Trading \;Interval}\\
+  P_{s}\; & \mathit{: the \;Transaction \;Price \;of \;FundS}\\
+  P_{a}\; & \mathit{: the \;Transaction \;Price \;of \;FundA}\\
+  P_{b}\; & \mathit{: the \;Transaction \;Price \;of \;FundB}\\
+  NV_{a}\; & \mathit{: the \;Net \;Value \;of \;FundA}\\
+  NV_{s}\; & \mathit{: the \;Net \;Value \;of \;FundS}\\
+  R_{a}\; & \mathit{: \;the \;Ratio \;of \;FundA \;in \;FundS}\\
+  R_{b}\; & \mathit{: \;the \;Ratio \;of \;FundB \;in \;FundS}\\
+  Y_{r}\; & \mathit{: \;Remaining \;Years \;of \;Regular \;Discount}\\
+  IR_{n}\; & \mathit{: \;Interest \;Rate \;of \;Next \;Period}\\
+  IR_{c}\; & \mathit{: \;Interest \;Rate \;of \;Current \;Period}\\
+  \end{align}</script><h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>  Data Source ：CSMAR of GTA<br>  filter condition : </p>
+<script type="math/tex; mode=display">
+  \begin{align}  
+  Y_{sa} &= 3.5\% \\
+  T_{i} &= 20 \;(Trading \; Day)\\
+  L_{a} &= 1000,000
+  \end{align}</script><p>  transaction object : the Structured Fund A</p>
+<h2 id="Related-Formulas"><a href="#Related-Formulas" class="headerlink" title="Related Formulas"></a>Related Formulas</h2><script type="math/tex; mode=display">
+  \begin{align}
+  Y_{ia} &= \frac{Y_{ia}} {( P_{a} + ( 1- NV_{a} )} &\qquad (1)\\
+  Y_{ia} &= \frac{IR_{n}} {( P_{a} + ( 1- NV_{a} ) + Y_{r} (IR_{n} - IR_{c}) }&\qquad (2)\\
+  \\
+  P_{s}  &= \frac{ P_{a} R_{a} + P_{b} R_{b} } { R_{a} +  R_{b} }&\qquad (3)\\
+  Rd_{s} &= \frac{ P_{s} - NV_{s} } { NV_{s} } &\qquad (4)\\
+  \\
+  Rd_{a} &= \frac{ NV_{a} - P_{a} } { NV_{a} } &\qquad (5)\\
+  \end{align}</script><h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><hr>
 <p>NOTES<br><em>Copyright and all rights therein are retained by Xujingjing. All persons copying this information are expected to note the source. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</em></p>
 
       
@@ -672,7 +704,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
 
 
 
@@ -725,6 +757,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 
